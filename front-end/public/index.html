@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: gap: * https://ssl.gstatic.com 'unsafe-eval'; style-src * 'unsafe-inline'; media-src *; img-src * data: blob: filesystem: android-webview-video-poster:; script-src * 'unsafe-inline' 'unsafe-eval'"
+    />
+    <title>Tv Store | Home</title>
+    <base href="/" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,600,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="cz-header">
+      <div class="cz-header__inner container">
+        <h1 class="cz-logo">
+          TV
+          <span1 class="cz-logo__span">Store</span1>
+        </h1>
+        <div class="menu-icon menu-icon-3 d-lg-none">
+          <div class="bar bar-1"></div>
+          <div class="bar bar-2"></div>
+          <div class="bar bar-3"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="cz-main">
+      <section class="container">
+        <div class="row py-5">
+          <div class="col-lg-2 d-none d-lg-block filters">
+            <div class="row">
+              <div class="col brand">
+                <h1 class="card-title mt-0">Marca</h1>
+                <!-- POPULADO VIA JS -->
+              </div>
+            </div>
+            <div class="row">
+              <div class="col screen_type">
+                <h1 class="card-title">Tipo</h1>
+                <!-- POPULADO VIA JS -->
+              </div>
+            </div>
+            <div class="row">
+              <div class="col screen_size">
+                <h1 class="card-title">Tamanho</h1>
+                <!-- POPULADO VIA JS -->
+              </div>
+            </div>
+            <div class="row">
+              <div class="col resolution">
+                <h1 class="card-title">Resolução</h1>
+
+                <!-- POPULADO VIA JS -->
+              </div>
+            </div>
+            <div class="row">
+              <div class="col voltage">
+                <h1 class="card-title">Voltagem</h1>
+
+                <!-- POPULADO VIA JS -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-10">
+            <div class="row">
+              <div class="col">
+                <div class="active-cyan-4 mb-4 mr-3">
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Buscar"
+                    aria-label="Search"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="box d-flex justify-content-start flex-wrap">
+              <!-- AJAX ITENS -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="cz-footer">
+      <span class="cz-footer__span">Feito com ❤️ por czbrains</span>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
