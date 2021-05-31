@@ -2,8 +2,6 @@ const mysql = require("mysql");
 const config = require("./config");
 
 class DB {
-  // static con;
-
   static getFilters() {
     return new Promise((resolve, reject) => {
       DB.pool.getConnection(function (err, connection) {

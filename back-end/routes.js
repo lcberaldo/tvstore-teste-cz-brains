@@ -5,7 +5,6 @@ const DB = require("./db");
 routes.get("/filters", function (req, res) {
   DB.getFilters()
     .then((filters) => {
-      // res.status(200).json(filters);
       res.send(filters);
     })
     .catch((err) => {
@@ -17,7 +16,6 @@ routes.get("/filters", function (req, res) {
 routes.get("/listAll", function (req, res) {
   DB.listAll(req.query)
     .then((finalResult) => {
-      // res.status(200).json(finalResult);
       res.send(finalResult);
     })
     .catch((err) => {

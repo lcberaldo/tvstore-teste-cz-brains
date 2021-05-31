@@ -1,5 +1,46 @@
 var result;
 
+function renderizaElement(element) {
+  return `<div class="col-lg-4 col-md-6 pl-0 mb-3 ">
+  <div class="cz-product-item">
+      <img
+        class="cz-product-item__img mb-4"
+        src="/assets/images/default-tv.png"
+        alt=""
+      />
+      <div class='px-3'>
+        <h2>${element.title}</h2>
+        <div class="cz-product-item__row">
+          <span>Marca:</span><span>${element.brand}</span>
+        </div>
+        <div class="cz-product-item__row">
+          <span>Tipo:</span><span>${element.screen_type}</span>
+        </div>
+        <div class="cz-product-item__row">
+          <span>Tamanha:</span><span>${element.screen_size}</span>
+        </div>
+        <div class="cz-product-item__row">
+          <span>Resolução:</span><span>${element.resolution}</span>
+        </div>
+        <div class="cz-product-item__row">
+          <span>Voltagem:</span><span>${element.voltage}</span>
+        </div>
+        <h2 class="mt-3">Informações adicionais</h2>
+        <div class="cz-product-item__row">
+          <span>Modelo:</span><span>USZ990055XD</span>
+        </div>
+        <div class="cz-product-item__row">
+          <span>Saídas:</span><span>2 HDMI, 1 USB</span>
+        </div>
+        <div class="cz-product-item__row mb-4">
+          <span>HDTV:</span><span>Sim</span>
+        </div>
+        <button class="btn btn-danger" type="button">Comprar</button>
+        </div>
+    </div>
+</div>`;
+}
+
 //Popular produtos -> TODAS AS TVS
 
 function populate(query) {
@@ -12,51 +53,7 @@ function populate(query) {
       200: function (data, status, xhr) {
         $(".box").html("");
         let content = `
-        ${data
-          .map(
-            (element) => `    
-            <div class="col-lg-4 col-md-6 pl-0 mb-3 ">
-              <div class="cz-product-item">
-                  <img
-                    class="cz-product-item__img mb-4"
-                    src="/assets/images/default-tv.png"
-                    alt=""
-                  />
-                  <div class='px-3'>
-                    <h2>${element.title}</h2>
-                    <div class="cz-product-item__row">
-                      <span>Marca:</span><span>${element.brand}</span>
-                    </div>
-                    <div class="cz-product-item__row">
-                      <span>Tipo:</span><span>${element.screen_type}</span>
-                    </div>
-                    <div class="cz-product-item__row">
-                      <span>Tamanha:</span><span>${element.screen_size}</span>
-                    </div>
-                    <div class="cz-product-item__row">
-                      <span>Resolução:</span><span>${element.resolution}</span>
-                    </div>
-                    <div class="cz-product-item__row">
-                      <span>Voltagem:</span><span>${element.voltage}</span>
-                    </div>
-                    <h2 class="mt-3">Informações adicionais</h2>
-                    <div class="cz-product-item__row">
-                      <span>Modelo:</span><span>USZ990055XD</span>
-                    </div>
-                    <div class="cz-product-item__row">
-                      <span>Saídas:</span><span>2 HDMI, 1 USB</span>
-                    </div>
-                    <div class="cz-product-item__row mb-4">
-                      <span>HDTV:</span><span>Sim</span>
-                    </div>
-                    <button class="btn btn-danger" type="button">Comprar</button>
-                    </div>
-                </div>
-            </div>
-          
-          `
-          )
-          .join("")}`;
+        ${data.map(renderizaElement).join("")}`;
         $(".box").append(content);
         result = data;
       },
@@ -127,50 +124,7 @@ function searchBar(result, string) {
   $(".box").html("");
 
   let content = `
-  ${searched
-    .map(
-      (element) => `    
-      <div class="col-lg-4 col-md-6 pl-0 mb-3 ">
-      <div class="cz-product-item">
-          <img
-            class="cz-product-item__img mb-4"
-            src="/assets/images/default-tv.png"
-            alt=""
-          />
-          <div class='px-3'>
-            <h2>${element.title}</h2>
-            <div class="cz-product-item__row">
-              <span>Marca:</span><span>${element.brand}</span>
-            </div>
-            <div class="cz-product-item__row">
-              <span>Tipo:</span><span>${element.screen_type}</span>
-            </div>
-            <div class="cz-product-item__row">
-              <span>Tamanha:</span><span>${element.screen_size}</span>
-            </div>
-            <div class="cz-product-item__row">
-              <span>Resolução:</span><span>${element.resolution}</span>
-            </div>
-            <div class="cz-product-item__row">
-              <span>Voltagem:</span><span>${element.voltage}</span>
-            </div>
-            <h2 class="mt-3">Informações adicionais</h2>
-            <div class="cz-product-item__row">
-              <span>Modelo:</span><span>USZ990055XD</span>
-            </div>
-            <div class="cz-product-item__row">
-              <span>Saídas:</span><span>2 HDMI, 1 USB</span>
-            </div>
-            <div class="cz-product-item__row mb-4">
-              <span>HDTV:</span><span>Sim</span>
-            </div>
-            <button class="btn btn-danger" type="button">Comprar</button>
-            </div>
-        </div>
-    </div>
-    `
-    )
-    .join("")}`;
+  ${searched.map(renderizaElement).join("")}`;
   $(".box").append(content);
 }
 
